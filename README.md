@@ -39,7 +39,7 @@ Exploratory Data Analysis or EDA is the first and foremost of all tasks that a d
 
 `df = pd.read_excel(io.BytesIO(uploaded['CPD for rpm and colab.xlsx']))`
 
-### Identifying the summary of a DataFrame. 
+### Identifying the summary of a DataFrame
 This method prints information about a DataFrame including the index dtype and column dtypes, non-null values and memory usage.
 
 ![2021-02-07 (2)](https://user-images.githubusercontent.com/77633676/107124112-cad54380-68dc-11eb-9c1e-b709c23a06c5.png)
@@ -87,6 +87,7 @@ These are the example on how I change the data type from object into int:
 `df = df.replace({"Skor Klasifikasi":  {"High":1,"Middle":2, "Low":3}})`
 
 All data type have been changed into numerical values.
+
 ![ssdm](https://user-images.githubusercontent.com/77633676/107126550-8ef5aa80-68eb-11eb-945e-4e995ca1b288.jpeg)
 
 ### Splitting dataset into training and test set
