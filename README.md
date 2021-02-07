@@ -8,6 +8,11 @@ Predicting score ratings using CPD Analysis Dataset.
 * Hypothesis from Dataset
 * Stakeholders
 * Exploratory data analysis steps
+* Data Preprocessing 
+* Descriptive and Predictive Data Mining
+* Data Mining Performances Comparison
+* Conclusion
+* Reflection
 
 ## Problem Statement
 From the CPD analysis, I found out the rating score given by the participants and number of participants in 2020 does not achieve target which is High score rate and 10,000 participants. The CPD activities only achieve Middle score rate and only 5,437 participants involved. In 2021, getting High score rate and 10,000 participants are the goal to achieve. 
@@ -19,7 +24,7 @@ For this project, I'm using the CPD Analysis Dataset. Continuing Professional De
 Based on the dataset that I get, there are several questions that I can come out with:
 * Which classification has the lowest score penilaian?
 * What is the relationship between rating and participants?
-* Does total hour ofcourse affecting the grade score?
+* Does Klasifikasi of activities affect the Score rating? 
 * What is the total participants of every classifications?
 
 ## Stakeholders
@@ -95,6 +100,11 @@ I need to split data-set into two separate sets whic is training set and test se
 
 ![2021-02-07 (7)](https://user-images.githubusercontent.com/77633676/107126847-3de6b600-68ed-11eb-8e36-24d5553baf21.png)
 
+## Descriptive and Predictive Data Mining
+### Descriptive Data Mining
+### Predictive Data Mining
+
+## Data Mining Performances Comparison
 
 ## Conclusion
 * All the model show increase in accuracy after tuning
