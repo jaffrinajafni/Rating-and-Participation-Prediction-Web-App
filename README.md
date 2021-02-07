@@ -96,3 +96,16 @@ I need to split data-set into two separate sets whic is training set and test se
 ![2021-02-07 (7)](https://user-images.githubusercontent.com/77633676/107126847-3de6b600-68ed-11eb-8e36-24d5553baf21.png)
 
 
+## Conclusion
+* All the model show increase in accuracy after tuning
+* The best model goes to **Decision Tree** in predictive data mining with the accuracy of 100% 
+* Accuracy 100% was obtained because the dataset is overfit and easy to predict 
+
+## Reflection
+* Learn to visualize the hypothesis into interactive visualization
+* Experienced in using software tool : PowerBI, Tableau, RapidMiner, and Google Colaboratory-Python 
+* Learn that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. 
+* Learn the scope of work of data scientist
+* Such an incredible journey throughout the one semester learning Data Mining with Dr Fadhlina in doing all the tasks and projects.
+Thank you to my Data Mining lecturer, Dr Fadhlina for all the knowledges and efforts in teaching this course!
+
