@@ -134,7 +134,7 @@ Grid search is arguably the most basic hyperparameter tuning method. With this t
 
 ![2021-02-08 (11)](https://user-images.githubusercontent.com/77633676/107240782-43670c00-6a65-11eb-9540-7dff67580691.png)
 
-After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase. Thus, the performance is increasing as well.
+After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase from 89.27% to 97.18%. Thus, the performance is increasing as well.
 
 ## Conclusion
 * All the model show increase in accuracy after tuning
