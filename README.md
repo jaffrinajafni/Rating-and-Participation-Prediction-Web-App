@@ -10,7 +10,9 @@ Predicting score ratings using CPD Analysis Dataset.
 * Exploratory data analysis steps
 * Data Preprocessing 
 * Descriptive and Predictive Data Mining
-* Data Mining Performances Comparison
+* Experiment Setting: Hyperparameter Tuning
+* Result and Analysis
+* Data Product
 * Conclusion
 * Reflection
 
@@ -18,7 +20,7 @@ Predicting score ratings using CPD Analysis Dataset.
 From the CPD analysis, I found out the rating score given by the participants and number of participants in 2020 does not achieve target which is High score rate and 10,000 participants. The CPD activities only achieve Middle score rate and only 5,437 participants involved. In 2021, getting High score rate and 10,000 participants are the goal to achieve. 
 
 ## Dataset Description
-For this project, I'm using the CPD Analysis Dataset. Continuing Professional Development (CPD) is a combination of approaches, ideas and techniques that will help you manage your own learning and growth. The focus of CPD is firmly on results – the benefits that professional development can bring you in the real world. This dataset contains analysis of CPD used in computing rating and participation prediction in UPM. Prediction of the score rating are based on the classification of activities held and the topic of the activities. This dataset contains 1318 instances and 7 columns. The raw dataset was in `.xlsx` format  
+For this project, I'm using the CPD Analysis Dataset. Continuing Professional Development (CPD) is a combination of approaches, ideas and techniques that will help you manage your own learning and growth. The focus of CPD is firmly on results – the benefits that professional development can bring you in the real world. This dataset contains analysis of CPD used in computing rating and participation prediction in UPM. Prediction of the score rating are based on the classification of activities held and the topic of the activities. This dataset contains 1318 instances and 7 columns.  The raw dataset was in `.xlsx` format  
 
 ## Hypothesis from Dataset
 Based on the dataset that I get, there are several questions that I can come out with:
@@ -51,6 +53,13 @@ This method prints information about a DataFrame including the index dtype and c
 
 ### Visualizations using PowerBI
 ![2021-02-07 (3)](https://user-images.githubusercontent.com/77633676/107124304-163c2180-68de-11eb-93af-cb8fd9bdd948.png)
+
+Observation:
+1. From the first diagram, we can see that the 'Skor Penilaian' is decreasing where Fakulti Perubatan & Sains Kesihatan has the highest 'Skor Penilaian' (803.64) and the lowest 'Skor Penilaian' is Fakulti Pengajian Alam Sekitar (4.62).
+2. We can see that the KAP has the highest average of 'Jumlah Jam' which is 37.12 hours and KAP also has the highest average of 'Skor Penilaian' which is 4.79 compared to CPD and PBP.
+3. PBP has the highest 'Skor Penilaian' by Klasifikasi which is 4481.95 while KAP has the lowest 'Skor Penilaian' which is 450.17.
+4. The highest 'Jumlah Jam' by 'Tajuk Latihan and 'Tempat Latihan' is 81 hours (24.18%) where the 'Tajuk Latihan' is KURSUS SISTEM PUTRABLAST V3.8(SIRI-9 FSPM UPMKB) and the 'Tempat Latihan' is MAKMAL D ICT, UPMKB.
+5. 'Skor Penilaian' of Klasifikasi (PBP) and Tajuk Latihan (MAJLIS PERASMIAN & ASPIRASI NC SEMPENA BULAN PENDIDIK UPM 2020) is 785.40 which is the highest score.
 
 ### Answers of Questions based on Visualizations
 * Which classification has the lowest score penilaian? - KAP has the lowest score rating.
@@ -109,15 +118,25 @@ I need to split data-set into two separate sets which is training set and test s
 ## Descriptive and Predictive Data Mining
 ### Descriptive Data Mining
 Descriptive data mining is under unsupervised learning. A descriptive model describes a system or other entity and its relationship to its environment. It is generally used to help specify and/or understand what the system is, what it does, and how it does it. The methods come under this type of mining category are called association, clustering, and summarization. For this case, I chose Clustering as the method for the process and K-Mean is the model of the machine learning algorithm.
-These are steps in developing descriptive data mining solution:
+These are steps in developing descriptive data mining solution in Python:
 1. Choose the right number of cluster(k) by performing elbow method
 2. k-value is obtained by picking the fewest number of clusters that reduces the average distance. After k-value, the graph is almost linear.
+3. Once k-value is obtained, we can visualize the clustering using matplotlib.
+
+For RapidMiner:
+![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png)
+
+For k-means:
+•	Read - Read in RapidMiner is used to read the data folder that have been input into the process.
+•	Select Attribute - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute. For this case, I select 'Klasifikasi' attribute to count each participant.
+•	Clustering - Select the model of the Clustering which is K-Means.
+•	Cluster Model Visualization - This cluster model visualization is used to visualize the model of the clustering which is k-Means.
 
 
 ### Predictive Data Mining
 Predictive analytics is the process by which information is extracted from existing datasets for determining patterns and predicting the forthcoming trends or outcomes.
 The methods come under this type of mining category are called classification, time-series analysis, and regression. For this case, I chose Classification as the method for the process.
-These are the steps in developing descriptive data mining solution:-
+These are the steps in developing descriptive data mining solution in Python:-
 1. Import required libraries
 2. Import and upload file into GoogleColab
 3. Load data and read file that has been imported
@@ -125,10 +144,22 @@ These are the steps in developing descriptive data mining solution:-
 5. Import required classifier
 6. Print the accuracy of the model (Decision Tree and Random Forest)
 
+For RapidMiner:
+![dtree](https://user-images.githubusercontent.com/77633676/107356545-e8d4bb00-6b0b-11eb-801f-f53e16b4ff20.png)
+![rforest](https://user-images.githubusercontent.com/77633676/107356765-29cccf80-6b0c-11eb-98d0-ec7a63ddc7e5.png)
 
-## Data Mining Performances Comparison
+In RapidMiner,  I implemented a new thing which is Discretize.  I will explain the function of each parameters that I used in the RapidMiner in order to process my decision making:
+•	Retrieved - Retrieved in RapidMiner is used to input the data folder into the process. We can also use Read parameter but it is slower since it needs to process each time when you fill in the data. However, by using retrieved, you just need to do it once since you already saved the file in the repository in the application.
+•	Discretize by Frequency - Discretized by Frequency is used when you want the sort or separate the implement into each of class that you already classified in the Excel and edit the number of bins based on class you have stated. 
+•	Nominal to Binominal -  Nominal to Binominal operator is used for changing the type of nominal attributes to a binominal type. This operator not only changes the type of selected attributes but it also maps all values of these attributes to binominal values i.e. true and false.
+•	Set Role- I'm using set role to determine the special attributes that we need to count. 
+•	Select Attributes - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute.
+•	Split Data - In split data, it will be boxes that we can fill to put ratio of our studies over 1.0. The top box usually 0.7 and below will be 0.3. But in some cases, people also put 0.8 and 0.2. The higher of top box the lower accuracy you can get formulally. 
+•	Decision Tree / Random Forest - Decision tree and Random Forest are common models that people use to predict things in RapidMiner. Normally, they are used to calculate the classification, the characterized data not numerical.
+•	Apply Model - In apply model, it is for applying the parameters that we stated behind it. It also have goal to predict the unseen data and to transform data into a preprocessing model.
+•	Performance - It will make the models compatible and do generating the result.
 
-### Hyperparameter Tuning
+## Experiment Setting: Hyperparameter Tuning
 The process of finding most optimal hyperparameters in machine learning is called hyperparameter optimisation. There are 3 commons algorithms which are Grid Search, Random Search, and Bayesian Optimisation. In this case, I decided to use Grid Search for hyperparameter tuning. 
 Grid search is arguably the most basic hyperparameter tuning method. With this technique, we simply build a model for each possible combination of all of the hyperparameter values provided, evaluating each model, and selecting the architecture which produces the best results. For example, we would define a list of values to try for both n_estimators and max_depth and a grid search would build a model for each possible combination. The diagram below shows the suggested values after hyperparameter tuning has been done for decision tree model:
 
@@ -136,10 +167,21 @@ Grid search is arguably the most basic hyperparameter tuning method. With this t
 
 After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase from 89.27% to 97.18%. Thus, the performance is increasing as well.
 
+## Result and Analysis
+### Data Mining Performances Comparison
+Ratio 50:50
+![2021-02-09 (12)](https://user-images.githubusercontent.com/77633676/107375012-3c063800-6b23-11eb-8dc0-df1a9a2aba81.png)
+Ratio 70:30
+![2021-02-09 (14)](https://user-images.githubusercontent.com/77633676/107375151-648e3200-6b23-11eb-99d5-28c9b6b39751.png)
+Python- Ratio 50:50, 70:30
+![2021-02-09 (18)](https://user-images.githubusercontent.com/77633676/107382838-4e846f80-6b2b-11eb-9a32-d8357ce3ee8a.png)
+
+In conclusion, all the model show increase in accuracy after hyperparameter tuning. The best model goes to **Decision Tree** in predictive data mining with the accuracy of 97.18% after hyperparameter tuning. Accuracy obtained is near 100% because the dataset is overfit and easy to predict.
+
 ## Conclusion
-* All the model show increase in accuracy after tuning
-* The best model goes to **Decision Tree** in predictive data mining with the accuracy of 97.18% 
-* Accuracy 100% was obtained because the dataset is overfit and easy to predict 
+* 
+* 
+* 
 
 ## Reflection
 From this project, I've learnt to visualize the hypothesis into interactive visualization. Also, I gain experience in using software tool such as PowerBI, Tableau, RapidMiner, and Google Colaboratory:Python. This project also makes me realize that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. The most interesting part is I've learn the scope of work of data scientist which is very exciting. It is such an incredible journey throughout this one semester learning Data Mining with Dr Fadhlina in doing all the tasks and projects.
