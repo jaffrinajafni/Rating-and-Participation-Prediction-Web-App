@@ -183,7 +183,7 @@ For Middle 'Skor Klasifikasi'
 ![2021-02-09 (24)](https://user-images.githubusercontent.com/77633676/107386034-6dd0cc00-6b2e-11eb-877d-3ed9cd99c778.png)
 ![2021-02-09 (26)](https://user-images.githubusercontent.com/77633676/107386145-893bd700-6b2e-11eb-8464-b7f633551a42.png)
 
-For Low "skor Klasifikasi
+For Low 'Skor Klasifikasi'
 
 ![2021-02-09 (29)](https://user-images.githubusercontent.com/77633676/107386542-e8015080-6b2e-11eb-874c-b536be113d3d.png)
 ![2021-02-09 (30)](https://user-images.githubusercontent.com/77633676/107386617-fbacb700-6b2e-11eb-9530-f6ad32afa69b.png)
