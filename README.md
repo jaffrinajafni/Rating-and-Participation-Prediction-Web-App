@@ -52,6 +52,7 @@ This method prints information about a DataFrame including the index dtype and c
 ![2021-02-07 (2)](https://user-images.githubusercontent.com/77633676/107124112-cad54380-68dc-11eb-9c1e-b709c23a06c5.png)
 
 ### Visualizations using PowerBI
+
 ![2021-02-07 (3)](https://user-images.githubusercontent.com/77633676/107124304-163c2180-68de-11eb-93af-cb8fd9bdd948.png)
 
 Observation:
@@ -124,6 +125,7 @@ These are steps in developing descriptive data mining solution in Python:
 3. Once k-value is obtained, we can visualize the clustering using matplotlib.
 
 For RapidMiner:
+
 ![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png)
 
 For k-means:
@@ -145,6 +147,7 @@ These are the steps in developing descriptive data mining solution in Python:-
 6. Print the accuracy of the model (Decision Tree and Random Forest)
 
 For RapidMiner:
+
 ![dtree](https://user-images.githubusercontent.com/77633676/107356545-e8d4bb00-6b0b-11eb-801f-f53e16b4ff20.png)
 ![rforest](https://user-images.githubusercontent.com/77633676/107356765-29cccf80-6b0c-11eb-98d0-ec7a63ddc7e5.png)
 
@@ -171,34 +174,55 @@ After the suggested values have been used to obtain new accuracy, we can see tha
 ### Data Mining Performances Comparison (RapidMiner)
 #### Decision Tree
 For High 'Skor Klasifikasi'
+
 ![2021-02-09 (20)](https://user-images.githubusercontent.com/77633676/107385549-f3a04780-6b2d-11eb-9842-1ee540e4c65e.png)
 ![2021-02-09 (22)](https://user-images.githubusercontent.com/77633676/107385644-0adf3500-6b2e-11eb-84e5-f5db6103d7c0.png)
+
 For Middle 'Skor Klasifikasi'
+
 ![2021-02-09 (24)](https://user-images.githubusercontent.com/77633676/107386034-6dd0cc00-6b2e-11eb-877d-3ed9cd99c778.png)
 ![2021-02-09 (26)](https://user-images.githubusercontent.com/77633676/107386145-893bd700-6b2e-11eb-8464-b7f633551a42.png)
+
 For Low "skor Klasifikasi
+
 ![2021-02-09 (29)](https://user-images.githubusercontent.com/77633676/107386542-e8015080-6b2e-11eb-874c-b536be113d3d.png)
 ![2021-02-09 (30)](https://user-images.githubusercontent.com/77633676/107386617-fbacb700-6b2e-11eb-9530-f6ad32afa69b.png)
+
 Auto Model
+
 ![2021-02-09 (34)](https://user-images.githubusercontent.com/77633676/107387707-0d428e80-6b30-11eb-989d-8129b0047c3b.png)
 ![2021-02-09 (35)](https://user-images.githubusercontent.com/77633676/107387769-1cc1d780-6b30-11eb-9241-e1d5fa196c9e.png)
 
 #### Random Forest
+
 ![2021-02-09 (38)](https://user-images.githubusercontent.com/77633676/107388040-601c4600-6b30-11eb-8f19-cf5e5b1921b1.png)
 ![2021-02-09 (40)](https://user-images.githubusercontent.com/77633676/107388295-a7a2d200-6b30-11eb-9884-62d36b0554fe.png)
+
+#### K-Means
+
+![2021-02-10 (7)](https://user-images.githubusercontent.com/77633676/107397440-9ca06f80-6b39-11eb-8467-842cb0474eb5.png)
+![2021-02-10 (9)](https://user-images.githubusercontent.com/77633676/107397514-ae821280-6b39-11eb-9e83-96d7612ba4cc.png)
+![2021-02-10 (11)](https://user-images.githubusercontent.com/77633676/107397576-bd68c500-6b39-11eb-9b78-1cff1b03816a.png)
+![2021-02-10 (13)](https://user-images.githubusercontent.com/77633676/107397630-cf4a6800-6b39-11eb-80e1-2bd8c4620a9c.png)
 
 
 ### Data Mining Performances Comparison (Tuning)
 Ratio 50:50
+
 ![2021-02-09 (12)](https://user-images.githubusercontent.com/77633676/107375012-3c063800-6b23-11eb-8dc0-df1a9a2aba81.png)
+
 Ratio 70:30
+
 ![2021-02-09 (14)](https://user-images.githubusercontent.com/77633676/107375151-648e3200-6b23-11eb-99d5-28c9b6b39751.png)
+
 Python- Ratio 50:50, 70:30
+
 ![2021-02-09 (18)](https://user-images.githubusercontent.com/77633676/107382838-4e846f80-6b2b-11eb-9a32-d8357ce3ee8a.png)
 
 In conclusion, all the model show increase in accuracy after hyperparameter tuning. The best model goes to **Decision Tree** in predictive data mining with the accuracy of 97.18% after hyperparameter tuning. Accuracy obtained is near 100% because the dataset is overfit and easy to predict.
 
 ## Data Product
+
 ![2021-02-09 (9)](https://user-images.githubusercontent.com/77633676/107395993-4ed73780-6b38-11eb-991e-4815d4a5cbe7.png)
 * Build web app by using Streamlit
 * The function of this web app is to predict the score rating by participant based on the attributes in the dataset which are Klasifikasi, Tajuk Latihan, Tempat Latihan, Jabatan, and Jumlah Jam.
