@@ -127,10 +127,10 @@ For RapidMiner:
 ![kmeans](https://user-images.githubusercontent.com/77633676/107358607-8e892980-6b0e-11eb-9a47-1a2cc79ab6d0.png)
 
 For k-means:
-•	Read - Read in RapidMiner is used to read the data folder that have been input into the process.
-•	Select Attribute - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute. For this case, I select 'Klasifikasi' attribute to count each participant.
-•	Clustering - Select the model of the Clustering which is K-Means.
-•	Cluster Model Visualization - This cluster model visualization is used to visualize the model of the clustering which is k-Means.
+* Read - Read in RapidMiner is used to read the data folder that have been input into the process.
+* Select Attribute - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute. For this case, I select 'Klasifikasi' attribute to count each participant.
+* Clustering - Select the model of the Clustering which is K-Means.
+* Cluster Model Visualization - This cluster model visualization is used to visualize the model of the clustering which is k-Means.
 
 
 ### Predictive Data Mining
@@ -149,15 +149,15 @@ For RapidMiner:
 ![rforest](https://user-images.githubusercontent.com/77633676/107356765-29cccf80-6b0c-11eb-98d0-ec7a63ddc7e5.png)
 
 In RapidMiner,  I implemented a new thing which is Discretize.  I will explain the function of each parameters that I used in the RapidMiner in order to process my decision making:
-•	Retrieved - Retrieved in RapidMiner is used to input the data folder into the process. We can also use Read parameter but it is slower since it needs to process each time when you fill in the data. However, by using retrieved, you just need to do it once since you already saved the file in the repository in the application.
-•	Discretize by Frequency - Discretized by Frequency is used when you want the sort or separate the implement into each of class that you already classified in the Excel and edit the number of bins based on class you have stated. 
-•	Nominal to Binominal -  Nominal to Binominal operator is used for changing the type of nominal attributes to a binominal type. This operator not only changes the type of selected attributes but it also maps all values of these attributes to binominal values i.e. true and false.
-•	Set Role- I'm using set role to determine the special attributes that we need to count. 
-•	Select Attributes - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute.
-•	Split Data - In split data, it will be boxes that we can fill to put ratio of our studies over 1.0. The top box usually 0.7 and below will be 0.3. But in some cases, people also put 0.8 and 0.2. The higher of top box the lower accuracy you can get formulally. 
-•	Decision Tree / Random Forest - Decision tree and Random Forest are common models that people use to predict things in RapidMiner. Normally, they are used to calculate the classification, the characterized data not numerical.
-•	Apply Model - In apply model, it is for applying the parameters that we stated behind it. It also have goal to predict the unseen data and to transform data into a preprocessing model.
-•	Performance - It will make the models compatible and do generating the result.
+* Retrieved - Retrieved in RapidMiner is used to input the data folder into the process. We can also use Read parameter but it is slower since it needs to process each time when you fill in the data. However, by using retrieved, you just need to do it once since you already saved the file in the repository in the application.
+* Discretize by Frequency - Discretized by Frequency is used when you want the sort or separate the implement into each of class that you already classified in the Excel and edit the number of bins based on class you have stated. 
+* Nominal to Binominal -  Nominal to Binominal operator is used for changing the type of nominal attributes to a binominal type. This operator not only changes the type of selected attributes but it also maps all values of these attributes to binominal values i.e. true and false.
+* Set Role- I'm using set role to determine the special attributes that we need to count. 
+* Select Attributes - Select attributes mainly used for separating the used and unused attributes in order to calculate the attribute.
+* Split Data - In split data, it will be boxes that we can fill to put ratio of our studies over 1.0. The top box usually 0.7 and below will be 0.3. But in some cases, people also put 0.8 and 0.2. The higher of top box the lower accuracy you can get formulally. 
+* Decision Tree / Random Forest - Decision tree and Random Forest are common models that people use to predict things in RapidMiner. Normally, they are used to calculate the classification, the characterized data not numerical.
+* Apply Model - In apply model, it is for applying the parameters that we stated behind it. It also have goal to predict the unseen data and to transform data into a preprocessing model.
+* Performance - It will make the models compatible and do generating the result.
 
 ## Experiment Setting: Hyperparameter Tuning
 The process of finding most optimal hyperparameters in machine learning is called hyperparameter optimisation. There are 3 commons algorithms which are Grid Search, Random Search, and Bayesian Optimisation. In this case, I decided to use Grid Search for hyperparameter tuning. 
@@ -168,7 +168,27 @@ Grid search is arguably the most basic hyperparameter tuning method. With this t
 After the suggested values have been used to obtain new accuracy, we can see that the hyperparameter tuning makes the accuracy increase from 89.27% to 97.18%. Thus, the performance is increasing as well.
 
 ## Result and Analysis
-### Data Mining Performances Comparison
+### Data Mining Performances Comparison (RapidMiner)
+#### Decision Tree
+For High 'Skor Klasifikasi'
+![2021-02-09 (20)](https://user-images.githubusercontent.com/77633676/107385549-f3a04780-6b2d-11eb-9842-1ee540e4c65e.png)
+![2021-02-09 (22)](https://user-images.githubusercontent.com/77633676/107385644-0adf3500-6b2e-11eb-84e5-f5db6103d7c0.png)
+For Middle 'Skor Klasifikasi'
+![2021-02-09 (24)](https://user-images.githubusercontent.com/77633676/107386034-6dd0cc00-6b2e-11eb-877d-3ed9cd99c778.png)
+![2021-02-09 (26)](https://user-images.githubusercontent.com/77633676/107386145-893bd700-6b2e-11eb-8464-b7f633551a42.png)
+For Low "skor Klasifikasi
+![2021-02-09 (29)](https://user-images.githubusercontent.com/77633676/107386542-e8015080-6b2e-11eb-874c-b536be113d3d.png)
+![2021-02-09 (30)](https://user-images.githubusercontent.com/77633676/107386617-fbacb700-6b2e-11eb-9530-f6ad32afa69b.png)
+Auto Model
+![2021-02-09 (34)](https://user-images.githubusercontent.com/77633676/107387707-0d428e80-6b30-11eb-989d-8129b0047c3b.png)
+![2021-02-09 (35)](https://user-images.githubusercontent.com/77633676/107387769-1cc1d780-6b30-11eb-9241-e1d5fa196c9e.png)
+
+#### Random Forest
+![2021-02-09 (38)](https://user-images.githubusercontent.com/77633676/107388040-601c4600-6b30-11eb-8f19-cf5e5b1921b1.png)
+![2021-02-09 (40)](https://user-images.githubusercontent.com/77633676/107388295-a7a2d200-6b30-11eb-9884-62d36b0554fe.png)
+
+
+### Data Mining Performances Comparison (Tuning)
 Ratio 50:50
 ![2021-02-09 (12)](https://user-images.githubusercontent.com/77633676/107375012-3c063800-6b23-11eb-8dc0-df1a9a2aba81.png)
 Ratio 70:30
@@ -179,9 +199,11 @@ Python- Ratio 50:50, 70:30
 In conclusion, all the model show increase in accuracy after hyperparameter tuning. The best model goes to **Decision Tree** in predictive data mining with the accuracy of 97.18% after hyperparameter tuning. Accuracy obtained is near 100% because the dataset is overfit and easy to predict.
 
 ## Conclusion
-* 
-* 
-* 
+From this project, I managed to provide results based on the classification of score which are High, Middle, and Low from the participants' feedbacks. The stakeholders which is the management can measure the performance of their events and can make improvement for next events.
+![2021-02-10 (2)](https://user-images.githubusercontent.com/77633676/107395382-b6d94e00-6b37-11eb-916d-466e164340c3.png)
+![2021-02-10 (3)](https://user-images.githubusercontent.com/77633676/107395449-c8baf100-6b37-11eb-8df8-3f5e5dca1401.png)
+![2021-02-10 (5)](https://user-images.githubusercontent.com/77633676/107395508-da03fd80-6b37-11eb-8db7-76c9e0a95098.png)
+
 
 ## Reflection
 From this project, I've learnt to visualize the hypothesis into interactive visualization. Also, I gain experience in using software tool such as PowerBI, Tableau, RapidMiner, and Google Colaboratory:Python. This project also makes me realize that Exploratory Data Analysis is a vital step in a data science project. The main pillars of EDA are data cleaning, data preparation, data exploration, and data visualization. The most interesting part is I've learn the scope of work of data scientist which is very exciting. It is such an incredible journey throughout this one semester learning Data Mining with Dr Fadhlina in doing all the tasks and projects.
