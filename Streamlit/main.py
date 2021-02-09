@@ -5,6 +5,17 @@ import streamlit as st
 pickle_in = open('classifier.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Download-Free-Aesthetic-HD-Images.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 @st.cache()
 # defining the function which will make the prediction using the data which the user inputs
 def prediction(KlasifikasiId, TajukLatihanId, TempatLatihanId, JabatanId, JumlahJam):
@@ -158,7 +169,7 @@ def prediction(KlasifikasiId, TajukLatihanId, TempatLatihanId, JabatanId, Jumlah
 def main():
     # front end elements of the web page
     html_temp = """ 
-    <div style ="background-color:yellow;padding:13px"> 
+    <div style ="background-color:pink;padding:13px"> 
     <h1 style ="color:black;text-align:center;">Score Prediction App</h1> 
     </div> 
     """
