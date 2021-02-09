@@ -198,8 +198,15 @@ Python- Ratio 50:50, 70:30
 
 In conclusion, all the model show increase in accuracy after hyperparameter tuning. The best model goes to **Decision Tree** in predictive data mining with the accuracy of 97.18% after hyperparameter tuning. Accuracy obtained is near 100% because the dataset is overfit and easy to predict.
 
+## Data Product
+![2021-02-09 (9)](https://user-images.githubusercontent.com/77633676/107395993-4ed73780-6b38-11eb-991e-4815d4a5cbe7.png)
+* Build web app by using Streamlit
+* The function of this web app is to predict the score rating by participant based on the attributes in the dataset which are Klasifikasi, Tajuk Latihan, Tempat Latihan, Jabatan, and Jumlah Jam.
+* Stakeholders : Staff & Management 
+
 ## Conclusion
 From this project, I managed to provide results based on the classification of score which are High, Middle, and Low from the participants' feedbacks. The stakeholders which is the management can measure the performance of their events and can make improvement for next events.
+
 ![2021-02-10 (2)](https://user-images.githubusercontent.com/77633676/107395382-b6d94e00-6b37-11eb-916d-466e164340c3.png)
 ![2021-02-10 (3)](https://user-images.githubusercontent.com/77633676/107395449-c8baf100-6b37-11eb-8df8-3f5e5dca1401.png)
 ![2021-02-10 (5)](https://user-images.githubusercontent.com/77633676/107395508-da03fd80-6b37-11eb-8db7-76c9e0a95098.png)
